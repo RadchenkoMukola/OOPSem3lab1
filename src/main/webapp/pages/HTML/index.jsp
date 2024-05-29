@@ -24,7 +24,7 @@
 
                 <%
                     if (request.getParameterMap().containsKey("logout")) {
-                        controller.logout((HttpServletRequest) request);
+                        controller.logout(request);
                         response.sendRedirect("/library/index");
                     }
                 %>
@@ -34,7 +34,7 @@
             <nav id="site-navigation" class="main-navigation">
                 <ul id="menu-menu-1" class="menu">
                     <%
-                        if (controller.hasRole((HttpServletRequest) request, "librarian")) {
+                        if (controller.hasRole(request, "librarian")) {
                             out.println("<li><a href=\"/library/book-management\">Book Management</a></li>");
                         }
                     %>
@@ -69,8 +69,8 @@
 
     <script>
         <%
-            out.println("const username = '" + controller.getUsername((HttpServletRequest) request) + "'");
-            out.println("const isLibrarian = " + controller.hasRole((HttpServletRequest) request, "librarian"));
+            out.println("const username = '" + controller.getUsername(request) + "'");
+            out.println("const isLibrarian = " + controller.hasRole(request, "librarian"));
         %>
     </script>
 

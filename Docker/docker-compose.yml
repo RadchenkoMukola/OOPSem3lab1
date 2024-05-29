@@ -47,7 +47,7 @@ services:
     networks:
       - backend
   tomcat:
-    image: tomcat:10-alpine
+    image: tomcat:9-alpine
     ports:
       - "8081:8080"
     networks:

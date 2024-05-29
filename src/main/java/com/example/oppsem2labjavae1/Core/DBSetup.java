@@ -5,10 +5,10 @@ import com.example.oppsem2labjavae1.Core.Repository.Repository;
 import lombok.Getter;
 
 public class DBSetup {
-
-    private static String DB_URL = "jdbc:postgresql://localhost:1234/postgres";
+    // TODO: Possibly read from json or smth like that
+    private static String DB_URL = "jdbc:postgresql://postgres:5432/dev";
     private static String DB_USER = "postgres";
-    private static String DB_PASSWORD = "mypass";
+    private static String DB_PASSWORD = "postgres";
 
     @Getter
     private static DBSetup instance = new DBSetup();

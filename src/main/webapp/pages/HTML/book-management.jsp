@@ -24,7 +24,7 @@
 
                 <%
                     if (request.getParameterMap().containsKey("logout")) {
-                        controller.logout((HttpServletRequest) request);
+                        controller.logout(request);
                         response.sendRedirect("/library/index");
                     }
                 %>
