@@ -1,0 +1,12 @@
+{
+  "realm": "Library",
+  "auth-server-url": "http://keycloak:8080/",
+  "ssl-required": "none",
+  "resource": "library",
+  "verify-token-audience": true,
+  "credentials": {
+    "secret": "79nXSRfm9dNRw0b2eobRN8RidsgzVmzh"
+  },
+  "use-resource-role-mappings": true,
+  "confidential-port": 0
+}
